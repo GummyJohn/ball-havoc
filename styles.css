@@ -1,19 +1,19 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
 
-#canvas{
+#canvas {
   border: 1px solid black;
   background-image: url(./assests/bg.jpg);
   background-position: center;
-  background-repeat: 'no-repeat';
+  background-repeat: "no-repeat";
   background-size: cover;
   max-width: 80%;
   margin: auto;
 }
 
-body{
+body {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,6 +21,6 @@ body{
   background-color: black;
 }
 
-#player{
+#player {
   display: none;
 }
