@@ -1,24 +1,26 @@
 import { Game } from "./game.js";
 
 const canvas = document.querySelector('#canvas');
-const cxt = canvas.getContext('2d')
-canvas.width= window.innerWidth;
-canvas.height= window.innerHeight;
+const cxt = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
-const game = new Game(canvas.width, canvas.height)
+const game = new Game(canvas.width, canvas.height);
+let keys = new Set()
 
 window.addEventListener('keydown', (e) => {
-  game.update(e.key);
+  keys.add(e.key)
+});
+
+window.addEventListener('keyup', (e) => {
+  keys.delete(e.key)
 })
 
-function animte(){
+function animate() {
   cxt.clearRect(0, 0, canvas.width, canvas.height);
-  game.draw(cxt)
-  requestAnimationFrame(animte)
+  game.update(keys)
+  game.draw(cxt);
+  requestAnimationFrame(animate);
 }
 
-animte()
-
-
-
-
+animate();
