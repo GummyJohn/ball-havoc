@@ -4,7 +4,7 @@ export class Projectile {
     this.y = y;
     this.width = 10;
     this.height = 20;
-    this.speed = 10; 
+    this.speed = 25; 
   }
 
   update() {

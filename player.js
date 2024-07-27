@@ -6,7 +6,7 @@ export class Player {
     this.x = this.game.width / 2 - this.width / 2;
     this.y = this.game.height - this.height;
     this.image = document.querySelector('#player');
-    this.speed = 7;
+    this.speed = 8;
   }
 
   draw(context) {
