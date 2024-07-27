@@ -5,12 +5,9 @@ export class Ball{
     this.y = y;
     this.radius = radius;
     this.speed = speed;
-    this.color = 'red'
   }
 
-  update(){}
-
-  touchPlayer(){}
-
-  draw(context){}
+  draw(context){
+    
+  }
 }
