@@ -6,12 +6,17 @@ export class Game {
     this.width = width;
     this.height = height;
     this.player = new Player(this);
-    this.projectile = null
+    this.projectiles = []
+    this.lastShot = 0;
+    this.coolDown = 300;
   }
 
   shoot(){
-    if(!this.projectile) {
-      this.projectile = new Projectile(this.player.x + 65, this.player.y);
+    const time = Date.now()
+    if(time - this.lastShot >= this.coolDown){
+      const projectile = new Projectile(this.player.x + 65, this.player.y);
+      this.projectiles.push(projectile)
+      this.lastShot = time;
     }
   }
 
@@ -34,19 +39,21 @@ export class Game {
       this.shoot()
     }
 
-    if (this.projectile) {
-      this.projectile.update();
+    this.projectiles.forEach((projectile) => {
+      projectile.update();
 
-      if (this.projectile.isOffScreen()) {
-        this.projectile = null;
+      if(projectile.isOffScreen()){
+        const index = this.projectiles.indexOf(projectile);
+        if(index !== -1){
+          this.projectiles.splice(index, 1)
+        }
       }
-    }
+    })
   }
 
   draw(context) {
     this.player.draw(context);
-    if (this.projectile) {
-      this.projectile.draw(context);
-    }
+
+    this.projectiles.forEach((projectile) => projectile.draw(context))
   }
 }
