@@ -6,15 +6,22 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 const game = new Game(canvas.width, canvas.height);
-let keys = new Set()
+const keys = new Set();
 
-window.addEventListener('keydown', (e) => {
+function handleAddKeys(e){
   keys.add(e.key)
-});
+  
+  if(game.gameOver && e.key === 'Enter'){
+    game.restart()
+  }
+}
 
-window.addEventListener('keyup', (e) => {
+function handleRemoveKeys(e){
   keys.delete(e.key)
-})
+}
+
+window.addEventListener('keydown', handleAddKeys);
+window.addEventListener('keyup', handleRemoveKeys)
 
 function animate() {
   cxt.clearRect(0, 0, canvas.width, canvas.height);

@@ -9,8 +9,9 @@
   background-position: center;
   background-repeat: "no-repeat";
   background-size: cover;
-  max-width: 80%;
+  max-width: 1000px;
   margin: auto;
+  height: 90%
 }
 
 body {
@@ -21,6 +22,6 @@ body {
   background-color: black;
 }
 
-#player {
+#player, #laser {
   display: none;
 }
