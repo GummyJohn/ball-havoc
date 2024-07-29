@@ -48,15 +48,14 @@ export class Ball {
     this.life -= damage
   }
 
-  removeBall(ball){
-    const index = this.game.balls.indexOf(ball)
+  removeBall(){
+    const index = this.game.balls.indexOf(this)
 
     if(index !== -1){
       this.game.balls.splice(index, 1)
       this.game.totalBalls--
       if(this.game.totalBalls === 0){
-        this.game.level++
-        this.game.startLevel()
+        this.game.nextLevel()
       }
     }
   }

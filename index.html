@@ -1,16 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>game</title>
-</head>
-<body>
-  <canvas id="canvas"></canvas>
-  <img src="./assests/Idle.png" alt="avatar" id="player">
-  <img src="./assests/laser.jpg" alt="laser" id="laser"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <title>game</title>
+  </head>
+  <body>
+    <div id="splashscreen" class="splash-screen">
+      <h1 class="title">Ball Havoc</h1>
+      <div>
+        <h2 class="my">Instructions</h2>
 
-  <script src="main.js" type="module"></script>
-</body>
+        <div class="flex-evenly">
+          <div>
+            <div class="flex-row">
+              <h2><i class="fa-solid fa-a"></i></h2>
+              <span class="mx">/</span>
+              <h2><i class="fa-solid fa-arrow-left"></i></h2>
+            </div>
+            <h2>Move Left</h2>
+          </div>
+
+          <div>
+            <div class="flex-row">
+              <h2><i class="fa-solid fa-d"></i></h2>
+              <span class="mx">/</span>
+              <h2><i class="fa-solid fa-arrow-right"></i></h2>
+            </div>
+            <h2>Move right</h2>
+          </div>
+        </div>
+
+        <div class="my">
+          <div class="spacebar">
+            <p>SpaceBar</p>
+          </div>
+          <h2>Shoot</h2>
+        </div>
+
+        <p class="words my">
+          Think You can beat all 5 levels without getting hit? Each levels gets
+          harder and harder! Up to the Challenge?
+        </p>
+
+        <button class="start my" id="startbutton">Start Game</button>
+      </div>
+    </div>
+    <canvas id="canvas"></canvas>
+    <img src="./assests/Idle.png" alt="avatar" id="player" />
+    <img src="./assests/laser.jpg" alt="laser" id="laser" />
+
+    <script src="main.js" type="module"></script>
+  </body>
 </html>
