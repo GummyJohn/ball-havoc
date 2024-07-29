@@ -1,11 +1,11 @@
 export class Projectile {
-  constructor(game, x, y, damage) {
+  constructor(game, x, y, damage, speed) {
     this.game = game;
     this.x = x;
     this.y = y;
-    this.width = 10;
+    this.width = 8;
     this.height = 20;
-    this.speed = 22; 
+    this.speed = speed; 
     this.damage = damage;
   }
 
