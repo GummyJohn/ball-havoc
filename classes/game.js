@@ -110,6 +110,7 @@ export class Game {
     this.level = 1;
     this.player.score = 0;
     this.gameOver = false;
+    this.beatGame = false;
     this.startLevel();
   }
 

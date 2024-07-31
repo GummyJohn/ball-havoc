@@ -70,7 +70,7 @@ export class Ball {
   checkHit(projectile){
     const distance = this.getDistance(this.x, this.y, projectile.x, projectile.y)
     if(distance < this.radius + projectile.width){
-      this.takeDamage(projectile.damage)
+      this.takeDamage(projectile.damage);
       return true;
     }
 
