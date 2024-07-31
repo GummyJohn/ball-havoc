@@ -52,29 +52,29 @@ export class Player {
   draw(context) {
     context.drawImage(this.image, this.x, this.y, this.width, this.height);
 
-      // display players score
-      context.font = "30px Arial";
-      context.fillStyle = "red";
-      context.textAlign = "right";
-      context.textBaseline = "top";
-      context.fillText(
-        `Score : ${this.score.toFixed(0)}`,
-        this.game.width - 10,
-        10
-      );
-  
-      // display Levels
-      context.font = "30px Arial";
-      context.fillStyle = "red";
-      context.textAlign = "left";
-      context.textBaseline = "top";
-      context.fillText(`Level : ${this.game.level}`, 0 + 10, 10);
-  
-      //display Ball to pop per level
-      context.font = "30px Arial";
-      context.fillStyle = "red";
-      context.textAlign = "center";
-      context.textBaseline = "top";
-      context.fillText(`${this.game.totalBalls}`, this.game.width / 2, 10);
+    // display players score
+    context.font = "30px Arial";
+    context.fillStyle = "red";
+    context.textAlign = "right";
+    context.textBaseline = "top";
+    context.fillText(
+      `Score : ${this.score.toFixed(0)}`,
+      this.game.width - 10,
+      10
+    );
+
+    // display Levels
+    context.font = "30px Arial";
+    context.fillStyle = "red";
+    context.textAlign = "left";
+    context.textBaseline = "top";
+    context.fillText(`Level : ${this.game.level}`, 0 + 10, 10);
+
+    //display Ball to pop per level
+    context.font = "30px Arial";
+    context.fillStyle = "red";
+    context.textAlign = "center";
+    context.textBaseline = "top";
+    context.fillText(`${this.game.totalBalls}`, this.game.width / 2, 10);
   }
 }
