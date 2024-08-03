@@ -14,5 +14,7 @@ If you have beaten my game, <a href="mailto:lijohnny21@gmail.com">Email Me</a> w
 
 ## WINNERS
 <ul>
-  
+  <li>
+    <a href="https://github.com/j0hnnyli">Johnny LI</a>
+  </li>
 </ul>
