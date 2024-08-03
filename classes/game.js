@@ -6,7 +6,7 @@ export class Game {
     this.width = width;
     this.height = height;
     this.player = new Player(this);
-    this.balls = [new Ball(this, 300, 300, 50, 50)];
+    this.balls = [];
     this.projectiles = [];
 
     this.lastShot = 0;
@@ -24,7 +24,7 @@ export class Game {
   startLevel() {
     this.balls = [];
     this.projectiles = [];
-    this.totalBalls = this.level * 7;
+    this.totalBalls = this.level * 5;
 
     this.generateBalls();
   }
@@ -51,7 +51,7 @@ export class Game {
         const ball = new Ball(this, randomX, randomY, randomR, randomR);
         this.balls.push(ball);
       }
-    }, Math.max(5000 - (this.level - 1) * 1000, 1500));
+    }, Math.max(5000 - (this.level - 1) * 1000, 1700));
   }
 
   update(keys) {
